@@ -21,38 +21,6 @@
 :guide-author: Open Liberty
 = Containerizing microservices
 
-[.hidden]
-NOTE: This repository contains the guide documentation source. To view the guide in published form, view it on the  https://openliberty.io/guides/{projectid}.html[Open Liberty website].
-
-Learn how to containerize and run your microservices with Open Liberty using Docker.
-
-// =================================================================================================
-//  What you'll learn
-// =================================================================================================
-
-== What you'll learn
-
-
-From development to production, and across your DevOps environments, you can deploy your microservices in a lightweight and portable manner by using containers. You can run a container from a container image. Each container image is a package of what you need to run your microservice or application, from the code to its dependencies and configuration. If you're new to the development of applications in containers, you might want to start with the https://openliberty.io/guides/docker.html[Using Docker containers to develop microservices^] guide before you work through this guide.
-
-You'll learn how to build container images and run containers using https://www.docker.com/[Docker^] for your microservices. You'll learn about the https://github.com/OpenLiberty/ci.docker[Open Liberty container images^] and how to use them for your containerized applications. You'll construct `Dockerfile` files, create Docker images by using the `docker build` command, and run the image as Docker containers by using `docker run` command.
-
-The two microservices that you'll be working with are called `system` and `inventory`. The `system` microservice returns the JVM system properties of the running container. The `inventory` microservice adds the properties from the `system` microservice to the inventory. This guide demonstrates how both microservices can run and communicate with each other in different Docker containers. 
-
-== Additional prerequisites
-
-Before you begin, Docker needs to be installed. For installation instructions, refer to the https://docs.docker.com/get-docker/[official Docker documentation^]. You will build and run the microservices in Docker containers.
-
-Make sure to start your Docker daemon before you proceed.
-
-///////////////////////////
-// Getting started
-///////////////////////////
-
-[role='command']
-include::{common-includes}/gitclone.adoc[]
-
-
 == Packaging your microservices
 
 // static guide instructions:
